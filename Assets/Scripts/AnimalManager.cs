@@ -26,7 +26,7 @@ public class AnimalManager : MonoBehaviour
             {
                 currentAnimalIndex = animals.Length - 1;
             }
-            currentAnimal = Instantiate(animals[currentAnimalIndex], currentAnimal.transform.position, Quaternion.identity);
+            currentAnimal = Instantiate(animals[currentAnimalIndex], currentAnimal.transform.position, currentAnimal.transform.rotation);
         }
         else if (Input.GetKeyDown(KeyCode.E))
         {
@@ -36,7 +36,7 @@ public class AnimalManager : MonoBehaviour
             {
                 currentAnimalIndex = 0;
             }
-            currentAnimal = Instantiate(animals[currentAnimalIndex], currentAnimal.transform.position, Quaternion.identity);
+            currentAnimal = Instantiate(animals[currentAnimalIndex], currentAnimal.transform.position, currentAnimal.transform.rotation);
         }
     }
 }
